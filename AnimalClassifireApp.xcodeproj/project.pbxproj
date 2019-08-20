@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5299976D230C2C170041BCED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299976C230C2C170041BCED /* AppDelegate.swift */; };
-		5299976F230C2C170041BCED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299976E230C2C170041BCED /* ViewController.swift */; };
+		5299976F230C2C170041BCED /* ClassifarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299976E230C2C170041BCED /* ClassifarViewController.swift */; };
 		52999772230C2C170041BCED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52999770230C2C170041BCED /* Main.storyboard */; };
 		52999774230C2C190041BCED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52999773230C2C190041BCED /* Assets.xcassets */; };
 		52999777230C2C190041BCED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52999775230C2C190041BCED /* LaunchScreen.storyboard */; };
+		5299977F230C2F570041BCED /* RoundedVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299977E230C2F570041BCED /* RoundedVisualEffectView.swift */; };
+		52999784230C35AF0041BCED /* AnimalClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 52999783230C35AF0041BCED /* AnimalClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52999769230C2C170041BCED /* AnimalClassifireApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalClassifireApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5299976C230C2C170041BCED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5299976E230C2C170041BCED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5299976E230C2C170041BCED /* ClassifarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifarViewController.swift; sourceTree = "<group>"; };
 		52999771230C2C170041BCED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52999773230C2C190041BCED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52999776230C2C190041BCED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52999778230C2C190041BCED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5299977E230C2F570041BCED /* RoundedVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedVisualEffectView.swift; sourceTree = "<group>"; };
+		52999783230C35AF0041BCED /* AnimalClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimalClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		5299976B230C2C170041BCED /* AnimalClassifireApp */ = {
 			isa = PBXGroup;
 			children = (
+				52999783230C35AF0041BCED /* AnimalClassifier.mlmodel */,
+				52999781230C31E60041BCED /* View */,
+				52999780230C31DE0041BCED /* Controller */,
 				5299976C230C2C170041BCED /* AppDelegate.swift */,
-				5299976E230C2C170041BCED /* ViewController.swift */,
 				52999770230C2C170041BCED /* Main.storyboard */,
 				52999773230C2C190041BCED /* Assets.xcassets */,
 				52999775230C2C190041BCED /* LaunchScreen.storyboard */,
 				52999778230C2C190041BCED /* Info.plist */,
 			);
 			path = AnimalClassifireApp;
+			sourceTree = "<group>";
+		};
+		52999780230C31DE0041BCED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5299976E230C2C170041BCED /* ClassifarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52999781230C31E60041BCED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5299977E230C2F570041BCED /* RoundedVisualEffectView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5299976F230C2C170041BCED /* ViewController.swift in Sources */,
+				5299976F230C2C170041BCED /* ClassifarViewController.swift in Sources */,
 				5299976D230C2C170041BCED /* AppDelegate.swift in Sources */,
+				5299977F230C2F570041BCED /* RoundedVisualEffectView.swift in Sources */,
+				52999784230C35AF0041BCED /* AnimalClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Classifar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ClassifarViewController" customModule="AnimalClassifireApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UNB-dg-WMm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y56-0E-npK">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="tGV-Vn-SAc">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="cameraBtnWasPressed:" destination="BYZ-38-t0r" id="XXI-oh-ijK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-9w-MEJ" customClass="RoundedVisualEffectView" customModule="AnimalClassifireApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="523" width="335" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8px-qk-qic">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera button to chose an image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Gxt-QQ-giT">
+                                            <rect key="frame" x="8" y="8" width="319" height="64"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gxt-QQ-giT" firstAttribute="leading" secondItem="8px-qk-qic" secondAttribute="leading" constant="8" id="Nhz-7G-q8t"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gxt-QQ-giT" secondAttribute="bottom" constant="8" id="Xuc-Dy-37h"/>
+                                        <constraint firstItem="Gxt-QQ-giT" firstAttribute="top" secondItem="8px-qk-qic" secondAttribute="top" constant="8" id="o1c-Ks-Akd"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gxt-QQ-giT" secondAttribute="trailing" constant="8" id="x5C-gw-hHZ"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LfC-Mb-6KD"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y56-0E-npK" firstAttribute="top" secondItem="NtC-9w-MEJ" secondAttribute="bottom" constant="20" id="6O6-CD-mBa"/>
+                            <constraint firstItem="UNB-dg-WMm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Pv-Ur-2cU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NtC-9w-MEJ" secondAttribute="trailing" constant="20" id="7na-cP-wsv"/>
+                            <constraint firstItem="UNB-dg-WMm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CsQ-Iz-JJC"/>
+                            <constraint firstItem="Y56-0E-npK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F2n-FC-NWb"/>
+                            <constraint firstItem="Y56-0E-npK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PWV-hN-nnV"/>
+                            <constraint firstItem="UNB-dg-WMm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Yxx-Dj-JTA"/>
+                            <constraint firstItem="Y56-0E-npK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bs1-U2-l4g"/>
+                            <constraint firstItem="NtC-9w-MEJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fnT-4f-LKI"/>
+                            <constraint firstItem="UNB-dg-WMm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zcN-WI-Nsv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="Gxt-QQ-giT" id="DrB-WI-NGr"/>
+                        <outlet property="imageView" destination="UNB-dg-WMm" id="vPq-J3-iqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
